@@ -4,32 +4,11 @@ import { ImHappy, ImAngry, ImWink, ImSad, ImNeutral } from "react-icons/im";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const Home = () => {
-    const [terrible, setTerrible] = React.useState(0);
-    const [bad, setBad] = React.useState(0);
-    const [meh, setMeh] = React.useState(0);
-    const [good, setGood] = React.useState(0);
-    const [excellent, setExcellent] = React.useState(0);
-
-    const terribleHandler = () => {
-        setTerrible((value) => value + 1);
-    };
-    const badHandler = () => {
-        setBad((value) => value + 1);
-    };
-    const mehHandler = () => {
-        setMeh((value) => value + 1);
-    };
-    const goodHandler = () => {
-        setGood((value) => value + 1);
-    };
-    const excellentHandler = () => {
-        setExcellent((value) => value + 1);
-    };
-    console.log(terrible, "terrible");
-    console.log(bad, "bad");
-    console.log(meh, "meh");
-    console.log(good, "good");
-    console.log(excellent, "excellent");
+    const terribleHandler = () => {};
+    const badHandler = () => {};
+    const mehHandler = () => {};
+    const goodHandler = () => {};
+    const excellentHandler = () => {};
     return (
         <div className="home">
             <div className="home-nav">
