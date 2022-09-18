@@ -2,9 +2,16 @@ import "./home.scss";
 import React from "react";
 import { ImHappy, ImAngry, ImWink, ImSad, ImNeutral } from "react-icons/im";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { useDispatch, useSelector } from "react-redux";
+import { terribleActions } from "../Redux/Features/terribleSlice";
 
 const Home = () => {
-    const terribleHandler = () => {};
+    const dispatch = useDispatch();
+    const sl = useSelector((state) => state.terrible.terribleCount);
+    console.log(sl, "terrible");
+    const terribleHandler = () => {
+        dispatch(terribleActions.terribleIncriment());
+    };
     const badHandler = () => {};
     const mehHandler = () => {};
     const goodHandler = () => {};
