@@ -2,28 +2,42 @@ import "./home.scss";
 import React from "react";
 import { ImHappy, ImAngry, ImWink, ImSad, ImNeutral } from "react-icons/im";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { terribleActions } from "../Redux/Features/terribleSlice";
+import { Link } from "react-router-dom";
+import { badActions } from "../Redux/Features/badSlice";
+import { mehActions } from "../Redux/Features/mehSlice";
+import { goodActions } from "../Redux/Features/goodSlice";
+import { excellentActions } from "../Redux/Features/excellentSlice";
 
 const Home = () => {
     const dispatch = useDispatch();
-    const sl = useSelector((state) => state.terrible.terribleCount);
-    console.log(sl, "terrible");
+
     const terribleHandler = () => {
         dispatch(terribleActions.terribleIncriment());
     };
-    const badHandler = () => {};
-    const mehHandler = () => {};
-    const goodHandler = () => {};
-    const excellentHandler = () => {};
+    const badHandler = () => {
+        dispatch(badActions.badIncrement());
+    };
+    const mehHandler = () => {
+        dispatch(mehActions.mehIncrement());
+    };
+    const goodHandler = () => {
+        dispatch(goodActions.goodIncrement());
+    };
+    const excellentHandler = () => {
+        dispatch(excellentActions.excellentIncrement());
+    };
     return (
         <div className="home">
             <div className="home-nav">
-                <GiHamburgerMenu
-                    size={25}
-                    color="#1c2841"
-                    style={{ cursor: "pointer" }}
-                />
+                <Link to="/admin">
+                    <GiHamburgerMenu
+                        size={25}
+                        color="#1c2841"
+                        style={{ cursor: "pointer" }}
+                    />
+                </Link>
             </div>
             <div className="home-emoji">
                 <button className="home-btn" onClick={terribleHandler}>
