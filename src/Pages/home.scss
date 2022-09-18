@@ -4,6 +4,12 @@
     position: relative;
     background-color: black;
 
+    &-nav {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+    }
+
     &-emoji {
         text-align: center;
         position: absolute;
@@ -19,13 +25,14 @@
         background-color: transparent;
         border: none;
         cursor: pointer;
-        animation: anima 6s ease-in-out infinite;
-        transition-delay: 3s;
+        animation: anima 5s ease-in-out infinite;
+
 
         &:hover {
 
             animation: none;
-            transform: scale(1.1);
+            transform: scale(1);
+            color: aliceblue;
 
         }
 
@@ -34,7 +41,7 @@
 
 .home-emoji {
     button:nth-of-type(1) {
-        animation-delay: .1s;
+        animation-delay: 0.1s;
     }
 
     button:nth-of-type(2) {
@@ -50,7 +57,7 @@
     }
 
     button:nth-of-type(5) {
-        animation-delay: .9s;
+        animation-delay: 1s;
     }
 }
 
