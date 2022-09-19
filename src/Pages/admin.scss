@@ -4,3 +4,58 @@
     margin: 5rem auto;
 
 }
+
+.icon {
+    margin: 2rem;
+}
+
+.emoji {
+    display: flex;
+    justify-content: center;
+    column-gap: 3rem;
+
+    &-main {
+        display: flex;
+        align-items: center;
+    }
+
+    &-icon {
+        font-size: 2.5rem;
+        margin-right: .5rem;
+    }
+
+    &-badge {
+        text-align: center;
+        padding-top: .4rem;
+        width: 2rem;
+        height: 1.6rem;
+        border-radius: 50%;
+
+    }
+
+}
+
+
+.bg-red {
+    background-color: #FF0000;
+    color: aliceblue;
+}
+
+.bg-orange {
+    background-color: #fc8e34;
+    color: #737373;
+}
+
+.bg-yellow {
+    background-color: #ffd21c;
+    color: #737373;
+}
+
+.bg-lime {
+    background-color: #5fed6d;
+}
+
+.bg-green {
+    background-color: #048104;
+    color: aliceblue;
+}
