@@ -1,7 +1,7 @@
 import "./home.scss";
 import React from "react";
 import { ImHappy, ImAngry, ImWink, ImSad, ImNeutral } from "react-icons/im";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { ImShield } from "react-icons/im";
 import { useDispatch } from "react-redux";
 import { terribleActions } from "../Redux/Features/terribleSlice";
 import { Link } from "react-router-dom";
@@ -9,30 +9,36 @@ import { badActions } from "../Redux/Features/badSlice";
 import { mehActions } from "../Redux/Features/mehSlice";
 import { goodActions } from "../Redux/Features/goodSlice";
 import { excellentActions } from "../Redux/Features/excellentSlice";
+import toast from "react-hot-toast";
 
 const Home = () => {
     const dispatch = useDispatch();
 
     const terribleHandler = () => {
         dispatch(terribleActions.terribleIncriment());
+        toast.success("Deep apology for your experience 😥 ");
     };
     const badHandler = () => {
         dispatch(badActions.badIncrement());
+        toast.success("Sorry for your inconvenience 😞 ");
     };
     const mehHandler = () => {
         dispatch(mehActions.mehIncrement());
+        toast.success("Hope we will make it exciting next time 😊 ");
     };
     const goodHandler = () => {
         dispatch(goodActions.goodIncrement());
+        toast.success("We are so happy to serve you well 😄 ");
     };
     const excellentHandler = () => {
         dispatch(excellentActions.excellentIncrement());
+        toast.success("We are as delighted as you 😉 ");
     };
     return (
         <div className="home">
             <div className="home-nav">
                 <Link to="/admin">
-                    <GiHamburgerMenu
+                    <ImShield
                         size={25}
                         color="#1c2841"
                         style={{ cursor: "pointer" }}
