@@ -12,6 +12,11 @@ import { excellentActions } from "../Redux/Features/excellentSlice";
 import toast from "react-hot-toast";
 
 const Home = () => {
+    const deviceWidth = () => {
+        return window.innerWidth < 688;
+    };
+    console.log(deviceWidth());
+
     const dispatch = useDispatch();
 
     const terribleHandler = () => {
@@ -35,41 +40,53 @@ const Home = () => {
         toast.success("We are as delighted as you 😉 ");
     };
     return (
-        <div className="home">
-            <div className="home-nav">
-                <Link to="/admin">
-                    <ImShield
-                        size={25}
-                        color="#1c2841"
-                        style={{ cursor: "pointer" }}
-                    />
-                </Link>
-            </div>
-            <h1 className="home-header">How did you like our service ?</h1>
+        <>
+            {deviceWidth() ? (
+                <div className="warning">
+                    <h3 className="warning-header">
+                        This app hasn't been designed for small screens!!
+                    </h3>
+                </div>
+            ) : (
+                <div className="home">
+                    <div className="home-nav">
+                        <Link to="/admin">
+                            <ImShield
+                                size={25}
+                                color="#1c2841"
+                                style={{ cursor: "pointer" }}
+                            />
+                        </Link>
+                    </div>
+                    <h1 className="home-header">
+                        How did you like our service ?
+                    </h1>
 
-            <div className="home-emoji">
-                <button className="home-btn" onClick={terribleHandler}>
-                    <ImAngry size={90} color={"#FF0000"} />
-                    <p>Terrible</p>
-                </button>
-                <button className="home-btn" onClick={badHandler}>
-                    <ImSad size={90} color={"#FF6347"} />
-                    <p>Bad</p>
-                </button>
-                <button className="home-btn" onClick={mehHandler}>
-                    <ImNeutral size={90} color={"#FFD700"} />
-                    <p>Meh</p>
-                </button>
-                <button className="home-btn" onClick={goodHandler}>
-                    <ImHappy size={90} color={"#00FF00"} />
-                    <p>Good</p>
-                </button>
-                <button className="home-btn" onClick={excellentHandler}>
-                    <ImWink size={90} color={"#32CD32"} />
-                    <p>Excellent</p>
-                </button>
-            </div>
-        </div>
+                    <div className="home-emoji">
+                        <button className="home-btn" onClick={terribleHandler}>
+                            <ImAngry size={90} color={"#FF0000"} />
+                            <p>Terrible</p>
+                        </button>
+                        <button className="home-btn" onClick={badHandler}>
+                            <ImSad size={90} color={"#FF6347"} />
+                            <p>Bad</p>
+                        </button>
+                        <button className="home-btn" onClick={mehHandler}>
+                            <ImNeutral size={90} color={"#FFD700"} />
+                            <p>Meh</p>
+                        </button>
+                        <button className="home-btn" onClick={goodHandler}>
+                            <ImHappy size={90} color={"#00FF00"} />
+                            <p>Good</p>
+                        </button>
+                        <button className="home-btn" onClick={excellentHandler}>
+                            <ImWink size={90} color={"#32CD32"} />
+                            <p>Excellent</p>
+                        </button>
+                    </div>
+                </div>
+            )}
+        </>
     );
 };
 
