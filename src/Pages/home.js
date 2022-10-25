@@ -45,6 +45,8 @@ const Home = () => {
                     />
                 </Link>
             </div>
+            <h1 className="home-header">How did you like our service ?</h1>
+
             <div className="home-emoji">
                 <button className="home-btn" onClick={terribleHandler}>
                     <ImAngry size={90} color={"#FF0000"} />
