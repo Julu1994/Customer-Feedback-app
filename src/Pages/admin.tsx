@@ -5,11 +5,13 @@ import { Link } from "react-router-dom";
 import { IoHome } from "react-icons/io5";
 import "./admin.scss";
 const Admin = () => {
-    const terrible = useSelector((state) => state.terrible.terribleCount);
-    const bad = useSelector((state) => state.bad.badCount);
-    const meh = useSelector((state) => state.meh.mehCount);
-    const good = useSelector((state) => state.good.goodCount);
-    const excellent = useSelector((state) => state.excellent.excellentCount);
+    const terrible = useSelector((state: any) => state.terrible.terribleCount);
+    const bad = useSelector((state: any) => state.bad.badCount);
+    const meh = useSelector((state: any) => state.meh.mehCount);
+    const good = useSelector((state: any) => state.good.goodCount);
+    const excellent = useSelector(
+        (state: any) => state.excellent.excellentCount
+    );
     const options = {
         series: [excellent, good, meh, terrible, bad],
         labels: ["Excellent", "Good", "Meh", "Terrible", "bad"],

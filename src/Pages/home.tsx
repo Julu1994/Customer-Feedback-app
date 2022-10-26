@@ -40,7 +40,7 @@ const Home = () => {
         toast.success("We are as delighted as you 😉 ");
     };
     return (
-        <>
+        <div>
             {deviceWidth() ? (
                 <div className="warning">
                     <h3 className="warning-header">
@@ -86,7 +86,7 @@ const Home = () => {
                     </div>
                 </div>
             )}
-        </>
+        </div>
     );
 };
 
