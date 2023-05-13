@@ -3,7 +3,6 @@ import Chart from "react-apexcharts";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { IoHome } from "react-icons/io5";
-//import mysvg from "../../public/img/mysvg.svg";
 import "./admin.scss";
 
 import { RootState } from '../Redux/store';
@@ -73,7 +72,6 @@ const Admin: React.FC = () => {
                 <div className="emoji-main">
                     <span className="emoji-icon ">😉 </span>
                     <span className="emoji-badge bg-green">{excellent}</span>
-                    <img src={""} alt="mysvg" />
                 </div>
             </div>
         </>

@@ -125,8 +125,8 @@ const handleButtonClick = (action: () => AnyAction, message: string, type: "succ
           <div className="home-nav">
             <Link to="/admin">
               <ImShield
-                size={25}
-                color="#1c2841"
+                size={35}
+                color="#2F4F4F	"
                 style={{ cursor: "pointer" }}
               />
             </Link>
