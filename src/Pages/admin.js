@@ -3,16 +3,13 @@ import Chart from "react-apexcharts";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { IoHome } from "react-icons/io5";
-// import mysvg "../../public/img/mysvg.svg";
 import "./admin.scss";
 const Admin = () => {
-    const terrible = useSelector((state: any) => state.terrible.terribleCount);
-    const bad = useSelector((state: any) => state.bad.badCount);
-    const meh = useSelector((state: any) => state.meh.mehCount);
-    const good = useSelector((state: any) => state.good.goodCount);
-    const excellent = useSelector(
-        (state: any) => state.excellent.excellentCount
-    );
+    const terrible = useSelector((state) => state.terrible.terribleCount);
+    const bad = useSelector((state) => state.bad.badCount);
+    const meh = useSelector((state) => state.meh.mehCount);
+    const good = useSelector((state) => state.good.goodCount);
+    const excellent = useSelector((state) => state.excellent.excellentCount);
     const options = {
         series: [excellent, good, meh, terrible, bad],
         labels: ["Excellent", "Good", "Meh", "Terrible", "bad"],
@@ -71,7 +68,6 @@ const Admin = () => {
                 <div className="emoji-main">
                     <span className="emoji-icon ">😉 </span>
                     <span className="emoji-badge bg-green">{excellent}</span>
-                    <img src={""} alt="fdvf" />
                 </div>
             </div>
         </>
