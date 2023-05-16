@@ -1,4 +1,6 @@
+// SignUp.tsx
 import React, { useState } from "react";
+import styles from "./signup.module.scss";
 
 interface SignUpState {
     username: string;
@@ -24,36 +26,38 @@ const SignUp: React.FC = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label>
-                Username:
-                <input
-                    type="text"
-                    name="username"
-                    value={state.username}
-                    onChange={handleChange}
-                />
-            </label>
-            <label>
-                Email:
-                <input
-                    type="email"
-                    name="email"
-                    value={state.email}
-                    onChange={handleChange}
-                />
-            </label>
-            <label>
-                Password:
-                <input
-                    type="password"
-                    name="password"
-                    value={state.password}
-                    onChange={handleChange}
-                />
-            </label>
-            <input type="submit" value="Submit" />
-        </form>
+        <div className={styles.container}>
+            <form onSubmit={handleSubmit}>
+                <label>
+                    Username:
+                    <input
+                        type="text"
+                        name="username"
+                        value={state.username}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
+                    Email:
+                    <input
+                        type="email"
+                        name="email"
+                        value={state.email}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
+                    Password:
+                    <input
+                        type="password"
+                        name="password"
+                        value={state.password}
+                        onChange={handleChange}
+                    />
+                </label>
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
     );
 };
 

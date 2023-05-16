@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Admin from "./Pages/admin";
 import React from "react";
 import Login from "./Pages/login/login";
+import SignUp from "./Pages/signup/signup";
 
 const App: React.FC = () => {
     return (
@@ -12,6 +13,7 @@ const App: React.FC = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/admin" element={<Admin />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<SignUp />} />
             </Routes>
         </BrowserRouter>
     );
